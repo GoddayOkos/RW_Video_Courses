@@ -9,7 +9,8 @@ class RWCoursesApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(Strings.appTitle)
+        title: Text(Strings.appTitle),
+        backgroundColor: Colors.green.shade800,
       ),
       body: const CoursesPage(),
     );

@@ -4,6 +4,8 @@ import 'package:rw_courses/strings.dart';
 
 void main() => runApp(MaterialApp(
       title: Strings.appTitle,
-      theme: ThemeData(primaryColor: Colors.green.shade800),
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+          primaryColor: Colors.green.shade800),
       home: const RWCoursesApp(),
     ));
