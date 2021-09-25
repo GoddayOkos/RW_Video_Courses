@@ -8,4 +8,14 @@ class Course {
     required this.name,
     required this.description
 });
+
+  Course.fromJson(Map<String, dynamic> json)
+    : courseId = json["id"],
+      name = json["attributes"]["name"],
+      description = json["attributes"]["description_plain_text"];
+
+  @override
+  String toString() {
+    return name;
+  }
 }
