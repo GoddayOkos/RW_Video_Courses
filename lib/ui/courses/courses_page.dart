@@ -23,7 +23,7 @@ class _CoursesPageState extends State<CoursesPage> {
          return const Center(child: CircularProgressIndicator());
        }
 
-       return const Text("RW courses");
+       return Text(courses.toString());
      },
    );
   }
