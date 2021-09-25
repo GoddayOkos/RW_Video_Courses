@@ -15,6 +15,12 @@ class FilterPage extends StatefulWidget {
 class _FilterPageState extends State<FilterPage> {
  late FilterState state;
 
+ @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    state = FilterStateContainer.of(context);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
