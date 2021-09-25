@@ -47,6 +47,7 @@ class _CoursesPageState extends State<CoursesPage> {
           borderRadius: BorderRadius.circular(8.0),
           child: Image.network(course.artworkUrl),
         ),
+        subtitle: Text(course.domainString),
       ),
     );
   }
