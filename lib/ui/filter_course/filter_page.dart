@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rw_courses/strings.dart';
 
 class FilterPage extends StatefulWidget {
   const FilterPage({Key? key}) : super(key: key);
@@ -12,7 +13,7 @@ class _FilterPageState extends State<FilterPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Filter Page"),
+        title: Text(Strings.filter),
         backgroundColor: Colors.green.shade800,
       ),
       body: const Center(
