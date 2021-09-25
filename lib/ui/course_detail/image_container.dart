@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
 class ImageContainer extends StatelessWidget {
-  final double width;
+  double? width;
   final double height;
   final Color placeholder;
   final String url;
 
-  const ImageContainer({
+  ImageContainer({
     Key? key,
-    required this.width,
+    this.width,
     required this.height,
     this.placeholder = const Color(0xFFEEEEEE),
     required this.url
