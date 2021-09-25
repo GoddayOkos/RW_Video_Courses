@@ -1,3 +1,8 @@
+
+import 'package:rw_courses/constants.dart';
+
+import 'domain.dart';
+
 class Course {
   final String courseId;
   final String name;
@@ -5,6 +10,7 @@ class Course {
   final String artworkUrl;
   final String difficulty;
   final String contributors;
+  final List<Domain> domains;
 
   Course({
     required this.courseId,
@@ -12,7 +18,8 @@ class Course {
     required this.description,
     required this.artworkUrl,
     required this.difficulty,
-    required this.contributors
+    required this.contributors,
+    required this.domains
 });
 
   Course.fromJson(Map<String, dynamic> json)
@@ -21,7 +28,38 @@ class Course {
       description = json["attributes"]["description_plain_text"],
       artworkUrl = json["attributes"]["card_artwork_url"],
       difficulty = json["attributes"]["difficulty"],
-      contributors = json["attributes"]["contributor_string"];
+      contributors = json["attributes"]["contributor_string"],
+      domains = [] {
+        var domainData = json["relationships"]["domains"]["data"] as List<dynamic>;
+        if (domainData.isNotEmpty) {
+          for (var i = 0; i < domainData.length; i++) {
+            var domain =
+            Course.getDomain(json["relationships"]["domains"]["data"][i]["id"]);
+            domains.add(domain);
+          }
+        }
+  }
+
+  static Domain getDomain(String domainId) {
+    switch (domainId) {
+      case Constants.iosDomain:
+        return Domain.ios;
+      case Constants.androidDomain:
+        return Domain.android;
+      case Constants.unityDomain:
+        return Domain.unity;
+      case Constants.sssDomain:
+        return Domain.sss;
+      case Constants.flutterDomain:
+        return Domain.flutter;
+      case Constants.macosDomain:
+        return Domain.macos;
+      case Constants.archivedDomain:
+        return Domain.archived;
+      default:
+        return Domain.unknown;
+    }
+  }
 
   @override
   String toString() {
