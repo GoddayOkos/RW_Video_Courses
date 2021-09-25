@@ -61,8 +61,17 @@ class Course {
     }
   }
 
+  get domainString {
+    String result = "";
+    for (var i = 0; i < domains.length - 1; i++) {
+      result += domains[i].name + ", ";
+    }
+    result += domains.last.name;
+    return result;
+  }
+
   @override
   String toString() {
-    return name + ": " + difficulty;
+    return name + ": " + domainString;
   }
 }
