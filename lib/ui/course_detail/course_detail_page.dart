@@ -21,4 +21,23 @@ class CourseDetailsPage extends StatelessWidget {
       url: course.artworkUrl,
     );
   }
+
+  Widget _buildMain(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            course.name,
+            style: Theme.of(context).textTheme.subtitle2!.copyWith(fontSize: 24)
+          ),
+          Text(
+            course.description,
+            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w300),
+          )
+        ],
+      ),
+    );
+  }
 }
