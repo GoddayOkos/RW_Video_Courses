@@ -91,6 +91,6 @@ class CourseDetailsPage extends StatelessWidget {
   }
 
   void _launchCourse(String courseId) {
-    launch("https://raywenderlich.com$courseId");
+    launch("https://raywenderlich.com/$courseId");
   }
 }
