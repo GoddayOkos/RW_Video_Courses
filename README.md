@@ -1,16 +1,8 @@
-# rw_courses
+# RW Courses App
 
-A new Flutter project.
+A flutter app built upon Raywenderlich courses api. 
+With this app, users can view, filter, and study their favourite courses on the raywenderlich website.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# Screenshots
+<img src="https://user-images.githubusercontent.com/60139290/134789258-c635539f-a923-4e78-8d84-6b09d4ed107e.png" width="300" /> <img src="https://user-images.githubusercontent.com/60139290/134789260-881922cc-594c-45c0-b3d6-b680824d686c.png" width="300" /> 
+<img src="https://user-images.githubusercontent.com/60139290/134789261-3aa6612d-6dec-474f-ac3a-8ac4b2529757.png" width="300" /> <img src="https://user-images.githubusercontent.com/60139290/134789264-a3ded144-69f0-4cd0-a5ff-197c1272a5e0.png" width="300" />
